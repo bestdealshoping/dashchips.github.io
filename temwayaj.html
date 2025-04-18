@@ -1,0 +1,134 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temwayaj Kliyan - Dasch Chips</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #d83400;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d83400;
+    }
+
+    .temoignage-box {
+      background-color: #fff;
+      border-left: 5px solid #ffae42;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .auteur {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    form {
+      margin-top: 30px;
+      background-color: #fefefe;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #d83400;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #bb2e00;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Temwayaj Kliyan - Dasch Chips</h1>
+  <p>"Dash Chips, Bon plezi, Bon gou!"</p>
+</header>
+
+<div class="container">
+  <h2>Sa Kliyan Nou Yo Di</h2>
+
+  <div class="temoignage-box">
+    <p>"Mwen toujou achte chips bananm nan. Li gen gou natirèl epi li trè krispy!"</p>
+    <p class="auteur">– Rose, Cap-Haïtien</p>
+  </div>
+
+  <div class="temoignage-box">
+    <p>"Livrezon an fèt rapid, bon sèvis kliyan. Mwen rekòmande Dasch Chips!"</p>
+    <p class="auteur">– Jean, Limbé</p>
+  </div>
+
+  <div class="temoignage-box">
+    <p>"Mwen se yon kliyan regilye. Chips yo toujou fre ak gou!"</p>
+    <p class="auteur">– Stéphanie, Port-au-Prince</p>
+  </div>
+
+  <h2>Voye pa ou tou</h2>
+  <form>
+    <label>Non ou:</label>
+    <input type="text" placeholder="Ekri non ou isit...">
+
+    <label>Kote ou ye:</label>
+    <input type="text" placeholder="Vil / Zòn ou ye...">
+
+    <label>Temwayaj ou:</label>
+    <textarea rows="4" placeholder="Kite mesaj ou isit..."></textarea>
+
+    <button type="submit">Voye Temwayaj</button>
+  </form>
+<script>
+  function envoyerWhatsapp() {
+    var nom = document.getElementById("nom").value;
+    var ville = document.getElementById("ville").value;
+    var message = document.getElementById("message").value;
+
+    var numero = "50942824391"; // Mete nimewo WhatsApp ou la (san + ni espas)
+    var text = "Nouvo temwayaj kliyan 📣:\n\n" +
+               "👤 Non: " + nom + "\n" +
+               "📍 Kote: " + ville + "\n" +
+"📝 Temwayaj:\n" + message;
+
+    var lien = "https://wa.me/" + numero + "?text=" + encodeURIComponent(text);
+    window.open(lien, '_blank');
+  }
+</script>
+</div>
+   </body>
+</html>
